@@ -1,0 +1,23 @@
+<head>
+
+</head>
+
+<body>
+    <h1>Test1 </h1>
+</body>
+<scipt>
+    <script type="module">
+        // Test faker
+
+        import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+        for (let i = 0; i < 10; i++) {
+            const cat = faker.animal.type()
+            console.log(cat, faker.image.urlLoremFlickr({ category: cat }));
+        }
+        window.speechSynthesis.onvoiceschanged = function () {
+            console.log("voice loaded", window.speechSynthesis.getVoices());
+        };
+
+
+    </script>
+</scipt>
