@@ -1,23 +1,44 @@
 <head>
-
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="/src/style/feat2.css">
 </head>
 
 <body>
-    <h1>Test1 </h1>
+    <h1>Test12 </h1>
+    <button id="play">Jouer</button>
+    <button id="listen">Ecouter le son</button>
+    <button id="rules">Expliquer les règles</button>
+    <select id="voice">
+        <option></option>
+    </select>
+    <div id="list">
+
+    </div>
 </body>
-<scipt>
-    <script type="module">
+<!-- <script type="module">
         // Test faker
 
-        import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
-        for (let i = 0; i < 10; i++) {
-            const cat = faker.animal.type()
-            console.log(cat, faker.image.urlLoremFlickr({ category: cat }));
-        }
-        window.speechSynthesis.onvoiceschanged = function () {
-            console.log("voice loaded", window.speechSynthesis.getVoices());
-        };
+        // import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+        // for (let i = 0; i < 10; i++) {
+        //     const cat = faker.animal.type()
+        //     console.log(cat, faker.image.urlLoremFlickr({ category: cat }));
+        // }
+        // window.speechSynthesis.onvoiceschanged = function () {
+        //     const voices = window.speechSynthesis.getVoices();
+        //     console.log("Voices: ", voices);
+        //     // say hello world
+        //     var utterance = new SpeechSynthesisUtterance('test de la synthèse vocale fr');
+        //     utterance.voice = voices[17]
+        //     utterance.onstart = function (event) {
+        //         console.log('le système prononce le texte.')
+        //     };
+        //     utterance.onend = function (event) {
+        //         console.log('fin de la synthèse.')
+        //     };
+        //     window.speechSynthesis.speak(utterance);
+
+        // };
 
 
-    </script>
-</scipt>
+
+    </script> -->
