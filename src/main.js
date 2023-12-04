@@ -1,11 +1,13 @@
 import { data, initData } from "./module/faker.js";
 import { initFeat1, changeImage } from "./module/feat1.js";
 import { initFeat2, lunchParty } from "./module/feat2.js";
+import { initVocalControl } from "./module/vocalControl.js";
 import { setSelectWithVoices, stopVoice } from "./module/voice.js";
 
 initData();
 initFeat2();
 initFeat1();
+initVocalControl();
 
 window.speechSynthesis.onvoiceschanged = () => {
   setSelectWithVoices();
