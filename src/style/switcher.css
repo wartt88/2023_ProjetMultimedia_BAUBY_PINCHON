@@ -1,0 +1,60 @@
+#mode {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    position: relative;
+    display: block;
+    width: 299px;
+    height: 75px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  #mode:after,
+  #mode:before {
+    box-sizing: border-box;
+    position: absolute;
+    border: 5px solid;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 32px;
+    transition: all 0.3s ease-out;
+    padding:0 10px;
+    font-weight: bold;
+  }
+
+  #mode:before {
+    content: " Apprendre ";
+    color: white;
+    left: 0;
+    border-color: black;
+    background: orange;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+
+  #mode:after {
+    right: 0;
+    content: " Jouer ";
+    border-color: black;
+    color: black;
+    background: #2D2D2D;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+  }
+
+  #mode:checked:after {
+    color: white;
+    border-color: black;
+    background: orange;
+  }
+
+  #mode:checked:before {
+    border-color: black;
+    color: black;
+    background: #2D2D2D;
+  }

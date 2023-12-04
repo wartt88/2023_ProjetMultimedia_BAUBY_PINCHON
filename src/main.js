@@ -2,9 +2,11 @@ import { initData, data, getListOfAnimal, getImage } from "./module/faker.js";
 import { generateCards } from "./module/view.js";
 import { setSelectWithVoices, read } from "./module/voice.js";
 import { initFeat2 } from "./module/feat2.js";
+import { initFeat1 } from "./module/feat1.js";
 
 initData();
 initFeat2();
+initFeat1();
 
 window.speechSynthesis.onvoiceschanged = () => {
   setSelectWithVoices();
@@ -25,21 +27,14 @@ export const loose = () => {
 };
 
 
-// fonctionnalite 1
-const apprendre = document.getElementById("suivant");
-apprendre.addEventListener("click",() => {
-  setRdmWord();
-  console.log(word);
-  getListOfAnimal(1, word.en).then((animals) => {
-    let img = document.getElementById("imgF1");
-    img.innerHTML = generateCards(animals);
-  })
-});
-const ecouter = document.getElementById("ecouter");
-ecouter.addEventListener("click",()=>{
-  read(word.fr)
+document.getElementById("mode").addEventListener("change", ()=> {
+  if(document.getElementById("mode").checked){
+    document.getElementById("fonctionnalite_2").classList.remove("invisible");
+    document.getElementById("fonctionnalite_1").classList.add("invisible");
+  }else{
+    document.getElementById("fonctionnalite_1").classList.remove("invisible");
+    document.getElementById("fonctionnalite_2").classList.add("invisible");
+  }
 })
-
-
 
 export let word = null;

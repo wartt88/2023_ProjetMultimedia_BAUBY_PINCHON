@@ -1,24 +1,33 @@
 <head>
     <script type="module" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="/src/style/feat2.css">
+    <link rel="stylesheet" type="text/css" href="/src/style/global.css">
+    <link rel="stylesheet" type="text/css" href="/src/style/switcher.css">
+
+
 </head>
 
-<body>
-    <h1>Test12 </h1>
+<div>
+    <h1>Img2Lang </h1>
 
-    <div id="fonctionnalite_2">
-        <button id="play">Jouer</button>
-        <button id="listen">Ecouter le son</button>
-        <button id="rules">Expliquer les règles</button>
+    <input id="mode" type="checkbox">
+
+    <div class="controls">
+    <button id="rules">Expliquer les règles</button>
         <select id="voice">
             <option>Aucune voix</option>
         </select>
+    </div>
+
+    <div id="fonctionnalite_2" class="invisible">
+        <button id="play">Jouer</button>
+        <button id="listen">Ecouter le son</button>
         <div id="list">
         </div>
     </div>
     <div id="fonctionnalite_1">
-        <button id="suivant">suivant</button>
-        <button id="ecouter">ecouter l'audio</button>
+        <button id="suivant">Jouer</button>
+        <button id="ecouter">Ecouter le son</button>
         <div id="imgF1"></div>
     </div>
 </body>

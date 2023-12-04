@@ -1,6 +1,7 @@
 import { setRdmWord, word } from "../main.js";
 import { getListOfAnimal } from "./faker.js";
 import { generateCards } from "./view.js";
+import { win,loose } from "../main.js";
 
 
 export const initFeat2 = () => {

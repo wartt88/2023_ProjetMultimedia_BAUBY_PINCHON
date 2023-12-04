@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(45deg, black,#6F562D, #DB8500);
+}
+
+.invisible {
+    display: none;
+}
+
+h1{
+    text-align: center;
+    margin: 0 auto;
+    font: italic small-caps bold 100px Georgia, serif;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
