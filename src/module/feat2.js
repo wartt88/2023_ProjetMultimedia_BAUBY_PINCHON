@@ -1,6 +1,7 @@
 import { setRdmWord, word } from "../main.js";
 import { getListOfAnimal } from "./faker.js";
 import { generateCards } from "./view.js";
+import { read } from "./voice.js";
 
 
 export const initFeat2 = () => {
@@ -11,9 +12,7 @@ const initButtons = () => {
   // Bouton ecouter
   const listenButton = document.getElementById("listen");
   listenButton.addEventListener("click", () => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(word.fr);
-    synth.speak(utterance);
+    read(word.fr);
   });
 
   // Bouton règles du jeu
