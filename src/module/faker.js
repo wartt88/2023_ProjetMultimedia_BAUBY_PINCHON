@@ -13,6 +13,7 @@ export const getListOfAnimal = async (number, animalRecherched) => {
   ];
 
   const dataCopy = [...data];
+  dataCopy.splice(dataCopy.indexOf(animalRecherched), 1);
   for (let i = 1; i < number; i++) {
     const rdm = Math.floor(Math.random() * dataCopy.length);
     const animal = dataCopy.splice(rdm, 1)[0];
