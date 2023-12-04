@@ -1,6 +1,50 @@
 [
-  { "en": "cow", "fr": "vache" },
-  { "en": "dog", "fr": "chien" },
-  { "en": "bird", "fr": "oiseau" },
-  { "en": "cat", "fr": "chat" }
+  {
+    "en": "bear",
+    "fr": "ours"
+  },
+  {
+    "en": "bird",
+    "fr": "oiseau"
+  },
+  {
+    "en": "cat",
+    "fr": "chat"
+  },
+  {
+    "en": "cow",
+    "fr": "vache"
+  },
+  {
+    "en": "crocodilia",
+    "fr": "crocodile"
+  },
+  {
+    "en": "dog",
+    "fr": "chien"
+  },
+  {
+    "en": "fish",
+    "fr": "poisson"
+  },
+  {
+    "en": "horse",
+    "fr": "cheval"
+  },
+  {
+    "en": "insect",
+    "fr": "insecte"
+  },
+  {
+    "en": "lion",
+    "fr": "lion"
+  },
+  {
+    "en": "rabbit",
+    "fr": "lapin"
+  },
+  {
+    "en": "snake",
+    "fr": "serpent"
+  }
 ]
