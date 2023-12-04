@@ -1,50 +1,86 @@
 [
   {
     "en": "bear",
-    "fr": "ours"
+    "fr": "ours",
+    "es": "oso",
+    "it": "orso",
+    "de": "Bär"
   },
   {
     "en": "bird",
-    "fr": "oiseau"
+    "fr": "oiseau",
+    "es": "pájaro",
+    "it": "uccello",
+    "de": "Vogel"
   },
   {
     "en": "cat",
-    "fr": "chat"
+    "fr": "chat",
+    "es": "gato",
+    "it": "gatto",
+    "de": "Katze"
   },
   {
     "en": "cow",
-    "fr": "vache"
+    "fr": "vache",
+    "es": "vaca",
+    "it": "mucca",
+    "de": "Kuh"
   },
   {
     "en": "crocodilia",
-    "fr": "crocodile"
+    "fr": "crocodile",
+    "es": "cocodrilo",
+    "it": "coccodrillo",
+    "de": "Krokodil"
   },
   {
     "en": "dog",
-    "fr": "chien"
+    "fr": "chien",
+    "es": "perro",
+    "it": "cane",
+    "de": "Hund"
   },
   {
     "en": "fish",
-    "fr": "poisson"
+    "fr": "poisson",
+    "es": "pez",
+    "it": "pesce",
+    "de": "Fisch"
   },
   {
     "en": "horse",
-    "fr": "cheval"
+    "fr": "cheval",
+    "es": "caballo",
+    "it": "cavallo",
+    "de": "Pferd"
   },
   {
     "en": "insect",
-    "fr": "insecte"
+    "fr": "insecte",
+    "es": "insecto",
+    "it": "insetto",
+    "de": "Insekt"
   },
   {
     "en": "lion",
-    "fr": "lion"
+    "fr": "lion",
+    "es": "león",
+    "it": "leone",
+    "de": "Löwe"
   },
   {
     "en": "rabbit",
-    "fr": "lapin"
+    "fr": "lapin",
+    "es": "conejo",
+    "it": "coniglio",
+    "de": "Hase"
   },
   {
     "en": "snake",
-    "fr": "serpent"
+    "fr": "serpent",
+    "es": "serpiente",
+    "it": "serpente",
+    "de": "Schlange"
   }
 ]
