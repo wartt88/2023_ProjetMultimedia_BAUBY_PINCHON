@@ -21,6 +21,8 @@ export const getListOfAnimal = async (number, animalRecherched) => {
       image: await getImage(animal.en),
     });
   }
+  // shuffle
+  animals.sort(() => Math.random() - 0.5);
   return animals;
 };
 

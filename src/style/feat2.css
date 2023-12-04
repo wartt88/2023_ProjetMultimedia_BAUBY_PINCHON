@@ -2,7 +2,6 @@
   background-color: #fff;
   border-radius: 2px;
   display: inline-block;
-  height: 300px;
   object-fit: contain;
   margin: 1rem;
   position: relative;
@@ -11,8 +10,9 @@
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  outline: 5px solid rgb(186, 33, 33);
 }
+
 
 #list {
   display: flex;
