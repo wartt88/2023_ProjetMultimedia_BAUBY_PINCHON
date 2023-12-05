@@ -42,7 +42,7 @@ function initButton() {
   
 }
 
-function play() {
+export function play() {
   if (document.getElementById("mode").checked)
     lunchParty();
   else

@@ -1,3 +1,6 @@
+import { readRules } from "./feats.js";
+import {play} from "../main.js";
+import { readSelectedWord } from "./voice.js";
 
  export function initVocalControl() {
 
@@ -48,31 +51,21 @@
 
 
         function action(a) {
+            const mode = document.getElementById("mode");
             // commun
             if (/.*\brègle(s)?\b.*/.test(a)){
-                document.getElementById("rules").click();
+                readRules();
             } else if (/.*\b(mode|apprendre|apprentissage|jouer|jeux)\b.*/.test(a)){
-                document.getElementById("mode").click();
+                mode.click();
             } else {
-                // Jouer
-                if (document.getElementById("mode").checked) {
                     let res = a.match(/\d+/g);
-                    if(res){
+                    if(res && mode.checked){
                         document.getElementById("list").childNodes[res[0]*2-1].click();
                     }else if (/.*\bsuivant(e)?\b.*/.test(a)){
-                        document.getElementById("play").click();
+                        play();
                     }else if (/.*\b(le son|bruit(s)?)\b.*/.test(a)){
-                        document.getElementById("listen").click();
+                        readSelectedWord()
                     }
-                }
-                // Apprendre
-                else{
-                    if (/.*\bsuivant(e)?\b.*/.test(a)){
-                        document.getElementById("suivant").click();
-                    }else if (/.*\b(le son|bruit(s)?)\b.*/.test(a)){
-                        document.getElementById("ecouter").click();
-                    }
-                }
             }
             console.log("fin action")
         }
