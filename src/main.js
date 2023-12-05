@@ -1,12 +1,10 @@
 import { data, initData } from "./module/faker.js";
-import { initFeat1, changeImage } from "./module/feat1.js";
-import { initFeat2, lunchParty } from "./module/feat2.js";
+import {changeImage , lunchParty, readRules } from "./module/feats.js";
 import { initVocalControl } from "./module/vocalControl.js";
 import { setSelectWithVoices, stopVoice } from "./module/voice.js";
 
 initData();
-initFeat2();
-initFeat1();
+initButton();
 initVocalControl();
 
 window.speechSynthesis.onvoiceschanged = () => {
@@ -19,15 +17,39 @@ export const setRdmWord = () => {
 
 document.getElementById("mode").addEventListener("change", () => {
   stopVoice();
-  if (document.getElementById("mode").checked) {
-    document.getElementById("fonctionnalite_2").classList.remove("invisible");
-    document.getElementById("fonctionnalite_1").classList.add("invisible");
+  document.getElementById("list").innerHTML = '';
+  if (document.getElementById("mode").checked)
     lunchParty();
-  } else {
-    document.getElementById("fonctionnalite_1").classList.remove("invisible");
-    document.getElementById("fonctionnalite_2").classList.add("invisible");
+  else
     changeImage();
-  }
 });
 
-export let word = null;
+
+// un unique init
+function initButton() {
+  // listen Button
+  document.getElementById("listen").addEventListener("click", () => {
+    readSelectedWord();
+  });
+  // play Ruler
+  document.getElementById("rules").addEventListener("click", () => {
+    readRules();
+  });
+  // play Button
+  document.getElementById("play").addEventListener("click", () => {
+    play();
+  });
+  
+}
+
+function play() {
+  if (document.getElementById("mode").checked)
+    lunchParty();
+  else
+    changeImage();
+}
+
+
+export let word = null; 
+
+

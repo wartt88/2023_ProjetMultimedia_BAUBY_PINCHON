@@ -24,3 +24,48 @@ h1{
 {
 display: none;
 }
+
+.next{
+    background-image: url("../assets/suivant.png");
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    margin: 0 0 0 50px;
+}
+
+.button:hover{
+    background-color: #DB8500;
+}
+
+.audio{
+    background-image: url("../assets/audio.png");
+}
+
+#vocalControl{
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    display: block;
+    width : 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("../assets/vocal.png");
+    background-size: cover;
+    border-radius: 15px;
+    transition: all 0.1s ease-in;
+    border: black 0px solid;
+}
+
+#vocalControl:hover {
+    background-color: #DB8500;
+}
+
+#vocalControl:checked {
+    background-color: #FF7474;
+    border: solid black 2px;
+}

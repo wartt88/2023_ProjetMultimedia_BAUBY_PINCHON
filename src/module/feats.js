@@ -3,30 +3,6 @@ import { getListOfAnimal } from "./faker.js";
 import { generateCards } from "./view.js";
 import { read, getLangueSelect, readSelectedWord } from "./voice.js";
 
-export const initFeat2 = () => {
-  initButtons();
-};
-
-const initButtons = () => {
-  // Bouton ecouter
-  const listenButton = document.getElementById("listen");
-  listenButton.addEventListener("click", () => {
-    readSelectedWord();
-  });
-
-  // Bouton règles du jeu
-  const rules = document.getElementById("rules");
-  rules.addEventListener("click", () => {
-    readRules();
-  });
-
-  // Bouton play
-  const play = document.getElementById("play");
-  play.addEventListener("click", () => {
-    lunchParty();
-  });
-};
-
 export const readRules = () => {
   let text =
     "Le but du jeu est de retrouver l'animal correspondant au mot prononcé";
@@ -50,6 +26,7 @@ export const readRules = () => {
   }
   read(text);
 };
+// feat 2
 
 export const lunchParty = () => {
   setRdmWord();
@@ -110,4 +87,15 @@ const loose = () => {
   }
   read(text);
   readSelectedWord();
+};
+
+// feat 1
+export const changeImage = () => {
+  setRdmWord();
+  console.log(word);
+  getListOfAnimal(1, word.en).then((animals) => {
+    let img = document.getElementById("list");
+    img.innerHTML = generateCards(animals);
+    readSelectedWord();
+  });
 };
