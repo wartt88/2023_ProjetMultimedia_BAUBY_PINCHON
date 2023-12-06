@@ -4,29 +4,15 @@ import { generateCards } from "./view.js";
 import { read, getLangueSelect, readSelectedWord } from "./voice.js";
 
 export const readRules = () => {
-  let text =
-    "Le but du jeu est de retrouver l'animal correspondant au mot prononcé";
-  switch (getLangueSelect().split("-")[0]) {
-    case "en":
-      text =
-        "The goal of the game is to find the animal corresponding to the word pronounced";
-      break;
-    case "es":
-      text =
-        "El objetivo del juego es encontrar el animal correspondiente a la palabra pronunciada";
-      break;
-    case "de":
-      text =
-        "Ziel des Spiels ist es, das zum ausgesprochenen Wort passende Tier zu finden";
-      break;
-    case "it":
-      text =
-        "Lo scopo del gioco è trovare l'animale corrispondente alla parola pronunciata";
-      break;
-  }
-  read(text);
+  let rules = {
+    fr: "Le but du jeu est de retrouver l'animal correspondant au mot prononcé",
+    en: "The goal of the game is to find the animal corresponding to the word pronounced",
+    es: "El objetivo del juego es encontrar el animal correspondiente a la palabra pronunciada",
+    de: "Ziel des Spiels ist es, das zum ausgesprochenen Wort passende Tier zu finden",
+    it: "Lo scopo del gioco è trovare l'animale corrispondente alla parola pronunciata",
+  };
+  read(rules[getLangueSelect().split("-")[0]]);
 };
-// feat 2
 
 export const lunchParty = () => {
   setRdmWord();
@@ -51,41 +37,25 @@ export const lunchParty = () => {
 };
 
 const win = () => {
-  let text = "Bravo, le nouveau mot est";
-  switch (getLangueSelect().split("-")[0]) {
-    case "en":
-      text = "Well done, the new word is";
-      break;
-    case "es":
-      text = "Bien hecho, la nueva palabra es";
-      break;
-    case "de":
-      text = "Gut gemacht, das neue Wort ist";
-      break;
-    case "it":
-      text = "Ben fatto, la nuova parola è";
-      break;
-  }
-  read(text);
+  const win = {
+    fr: "Bravo, le nouveau mot est",
+    en: "Well done, the new word is",
+    es: "Bien hecho, la nueva palabra es",
+    de: "Gut gemacht, das neue Wort ist",
+    it: "Ben fatto, la nuova parola è",
+  };
+  read(win[getLangueSelect().split("-")[0]]);
 };
 
 const loose = () => {
-  let text = "Dommage, tu as perdu, le mot à trouver est";
-  switch (getLangueSelect().split("-")[0]) {
-    case "en":
-      text = "Too bad, you lost, the word to find is";
-      break;
-    case "es":
-      text = "Que pena, perdiste, la palabra a encontrar es";
-      break;
-    case "de":
-      text = "Schade, du hast verloren, das zu findende Wort ist";
-      break;
-    case "it":
-      text = "Peccato, hai perso, la parola da trovare è";
-      break;
-  }
-  read(text);
+  const loose = {
+    fr: "Dommage, tu as perdu, le mot à trouver est",
+    en: "Too bad, you lost, the word to find is",
+    es: "Que pena, perdiste, la palabra a encontrar es",
+    de: "Schade, du hast verloren, das zu findende Wort ist",
+    it: "Peccato, hai perso, la parola da trovare è",
+  };
+  read(loose[getLangueSelect().split("-")[0]]);
   readSelectedWord();
 };
 

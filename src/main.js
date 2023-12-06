@@ -1,9 +1,9 @@
 import { data, initData } from "./module/faker.js";
 import {changeImage , lunchParty, readRules } from "./module/feats.js";
 import { initVocalControl } from "./module/vocalControl.js";
-import { setSelectWithVoices, stopVoice } from "./module/voice.js";
+import { readSelectedWord, setSelectWithVoices, stopVoice } from "./module/voice.js";
 
-initData();
+await initData();
 initButton();
 initVocalControl();
 

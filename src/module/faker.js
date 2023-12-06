@@ -29,8 +29,8 @@ export const getListOfAnimal = async (number, animalRecherched) => {
 
 export const data = [];
 
-export const initData = () => {
-  fetch("data.json")
+export const initData = async () => {
+  await fetch("data.json")
     .then((response) => response.json())
     .then((json) => {
       console.log("json", json);

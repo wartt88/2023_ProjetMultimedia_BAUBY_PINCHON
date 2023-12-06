@@ -1,4 +1,5 @@
-import { word } from "../main.js";
+import { setRdmWord, word } from "../main.js";
+import { changeImage } from "./feats.js";
 
 export const setSelectWithVoices = () => {
   const synth = window.speechSynthesis;
@@ -29,6 +30,9 @@ export const setSelectWithVoices = () => {
     voice = voices.find((voice) => voice.name === select.value);
   });
   voice = voices.find((voice) => voice.name === select.value);
+
+  setRdmWord();
+  changeImage();
 };
 
 export const getLangueSelect = () => {
@@ -56,27 +60,14 @@ export const read = (text) => {
 export const readSelectedWord = () => {
   const lang = getLangueSelect().split("-")[0];
   if (!word[lang]) {
-    let text =
-      "Attention, le mot n'est pas disponible dans cette langue, en anglais à la place";
-    switch (getLangueSelect().split("-")[0]) {
-      case "en":
-        text =
-          "Warning, the word is not available in this language, in English instead";
-        break;
-      case "es":
-        text =
-          "Advertencia, la palabra no está disponible en este idioma, en inglés en su lugar";
-        break;
-      case "de":
-        text =
-          "Warnung, das Wort ist in dieser Sprache nicht verfügbar, stattdessen auf Englisch";
-        break;
-      case "it":
-        text =
-          "Attenzione, la parola non è disponibile in questa lingua, in inglese invece";
-        break;
-    }
-    read(text);
+    const attention = {
+      fr: "Attention, le mot n'est pas disponible dans cette langue, en anglais à la place",
+      en: "Warning, the word is not available in this language, in English instead",
+      es: "Advertencia, la palabra no está disponible en este idioma, en inglés en su lugar",
+      de: "Warnung, das Wort ist in dieser Sprache nicht verfügbar, stattdessen auf Englisch",
+      it: "Attenzione, la parola non è disponibile in questa lingua, in inglese invece",
+    };
+    read(attention[lang]);
     read(word.en);
   }
   read(word[lang]);
@@ -85,4 +76,4 @@ export const readSelectedWord = () => {
 export const stopVoice = () => {
   const synth = window.speechSynthesis;
   synth.cancel();
-};  
+};
