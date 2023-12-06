@@ -1,7 +1,11 @@
 import { data, initData } from "./module/faker.js";
-import {changeImage , lunchParty, readRules } from "./module/feats.js";
+import { changeImage, lunchParty, readRules } from "./module/feats.js";
 import { initVocalControl } from "./module/vocalControl.js";
-import { readSelectedWord, setSelectWithVoices, stopVoice } from "./module/voice.js";
+import {
+  readSelectedWord,
+  setSelectWithVoices,
+  stopVoice,
+} from "./module/voice.js";
 
 await initData();
 initButton();
@@ -17,15 +21,11 @@ export const setRdmWord = () => {
 
 document.getElementById("mode").addEventListener("change", () => {
   stopVoice();
-  document.getElementById("list").innerHTML = '';
-  if (document.getElementById("mode").checked)
-    lunchParty();
-  else
-    changeImage();
+  document.getElementById("list").innerHTML = "";
+  if (document.getElementById("mode").checked) lunchParty();
+  else changeImage();
 });
 
-
-// un unique init
 function initButton() {
   // listen Button
   document.getElementById("listen").addEventListener("click", () => {
@@ -39,17 +39,11 @@ function initButton() {
   document.getElementById("play").addEventListener("click", () => {
     play();
   });
-  
 }
 
 export function play() {
-  if (document.getElementById("mode").checked)
-    lunchParty();
-  else
-    changeImage();
+  if (document.getElementById("mode").checked) lunchParty();
+  else changeImage();
 }
 
-
-export let word = null; 
-
-
+export let word = null;
