@@ -70,3 +70,7 @@ display: none;
     background-color: #FF7474;
     border: solid black 2px;
 }
+
+.card img{
+    width: 50vh;
+}
